@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign up and Log in Form</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- External styles -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="icon" href="assets/img/Swapify-removebg-preview.png">
+    
+</head>
+<body>
+
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/Swapify-removebg-preview.png" alt="Image could not load" class="img-fluid"></a>
+            </div>
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="logo">
+                    <h1 style="display: inline;"><a href="index.html" style="display: inline;">Swapify</a></h1>
+                </div>
+            </div>
+        </div>
+        
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+
+          <li><a href="CartPage.html">Cart</a></li>
+          <li class="dropdown"><a href="#"><span>Account</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="SignUp.html">Sign up</a></li>
+              <li><a href="logIn_.html">Log in</a></li>
+              <li class="dropdown"><a href="Profile_s.html"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="OrderHis.html">Order History</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->   
+</header>
+<main id="main">
+ <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h2>Sign Up</h2>
+                    <div class="inputbox">
+                      
+                        <input type="text" required>
+                        <label for="">Name</label>
+                    </div>
+                    <div class="inputbox">
+                       
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                     <div class="inputbox">
+                       
+                        <input type="tel" required>
+                        <label for="">phone Number</label>
+                    </div>
+                    <div class="inputbox">
+                       
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Remember Me</label>
+                      
+                    </div>
+                    <button>Sign Up</button>
+                    <div class="register">
+                        <p>Already have an account ? <a href="LogIn_.html">LogIn</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+  
+</main>
+
+
+
+<!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Swapify</h3>
+            <p>
+              A108 Adam Street <br>
+              Makkah, Makkah Province<br>
+              Saudi Arabia <br><br>
+              <strong>Phone:</strong> +966 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="FAQs.html">FAQs</a></li>
+            </ul>
+          </div>
+
+      
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-lg-flex py-4">
+
+      <div class="me-lg-auto text-center text-lg-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Swapify</span></strong>. All Rights Reserved
+        </div>
+        
+      </div>
+      <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <!-- JavaScript -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+ 
+<style>
+    
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url('background6.jpg')no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 610px;
+    background: #7895B2;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #fff;
+}
+
+.forget{
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.forget label input{
+    margin-right: 3px;
+    
+}
+.forget label a{
+    color: #fff;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+</style>
+
+
+</body>
+</html>
+
+
+
+
+
+ 

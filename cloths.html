@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Categories</title>
+   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- External styles -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/Swapify-removebg-preview.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-----------Style the item list --------------->
+  <style>
+    .rating .fa{
+    color:#708090;}
+    .wrapper{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.title{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #1b1919;
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.filter-btns{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+.filter-btn{
+    background: none;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 10px 30px;
+    font-size: 16px;
+    color: #708090;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.filter-btn::after{
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color: #555;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out
+}
+.filter-btn:hover{
+    color: #555;
+}
+.filter-btn:hover::after{
+    width: 100%;
+}
+/* active button */
+.active-btn{
+    color: #555;
+}
+.active-btn::after{
+    width: 100%;
+}
+/*  */
+
+.filter-items{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.filter-item:hover .item-img img{
+transform: translateY(-5px);
+}
+.filter-item{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition:transform 0.5s;
+}
+.filter-item img{
+    width: 100%;
+}
+h2{
+    font-size:15px;
+    color:#000000;
+    font-weight: normal;
+}
+
+.filter-item p{
+    font-size: 14px;
+    color: #800000;
+}
+.filter-item:hover{
+    transform: translateY(-5px);
+
+}
+
+@-webkit-keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+  </style>
+
+<!------------------ End of style ------------------>
+</head>
+<body>
+
+
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/Swapify-removebg-preview.png" alt="Image could not load" class="img-fluid"></a>
+            </div>
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="logo">
+                    <h1 style="display: inline;"><a href="index.html" style="display: inline;">Swapify</a></h1>
+                </div>
+            </div>
+        </div>
+        
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+
+          <li><a href="CartPage.html">Cart</a></li>
+          <li class="dropdown"><a href="#"><span>Account</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="SignUp.html">Sign up</a></li>
+              <li><a href="logIn_.html">Log in</a></li>
+              <li class="dropdown"><a href="Profile_s.html"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="OrderHis.html">Order History</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->   
+</header>
+
+
+
+<!-------------------item list--------------------------->
+      <div class = "wrapper">
+        
+                <div class = "filter-btns">
+                    <button type = "button" class = "filter-btn" id = "All">All</button>
+                    <button type = "button" class = "filter-btn" id = "Dresses">Dresses</button>
+                    <button type = "button" class = "filter-btn" id = "Tops">Tops</button>
+                    <button type = "button" class = "filter-btn" id = "Bottoms">Bottoms</button>
+                </div>
+
+                <div class = "filter-items">
+                    <div class = "filter-item All Tops">
+                      <a href="details1.html"><img src = "img/det5.jpg" alt = "Item image"></a>
+                        <h2> Trim Guipure Lace Blouse</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Tops">
+                      <img src = "img/img_2.jpg" alt = "Item image">
+                        <h2> single button blazer</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Tops">
+                      <img src = "img/img_3.jpg" alt = "Item image">
+                        <h2> flap double breasted blazer</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_4.jpg" alt = "Item image">
+                        <h2> plicated detail flared skirt</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_5.jpg" alt = "Item image">
+                        <h2>High waist twist tulip hem skirt</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_6.jpg" alt = "Item image">
+                        <h2>High waist pleated skirt</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_7.jpg" alt = "Item image">
+                        <h2>Plus floral print ruffle hem skirt </h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                               <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_8.jpg" alt = "Item image">
+                        <h2>Light wash wide leg jeans</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_9.jpg" alt = "Item image">
+                        <h2>Washed skinny jeans</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_10.jpg" alt = "Item image">
+                        <h2>High waist plicated detail pants</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+                        
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_11.jpg" alt = "Item image">
+                        <h2>Paper bag waist roll jeans</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_12.jpg" alt = "Item image">
+                        <h2>Paperbag waist slant pocket jeans</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_13.jpg" alt = "Item image">
+                        <h2>Fringe trim split pants</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_14.jpg" alt = "Item image">
+                        <h2>Slant pocket skinny pants</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_15.jpg" alt = "Item image">
+                        <h2>Fold pleat roll hem plants</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Tops">
+                      <img src = "img/img_17.jpg" alt = "Item image">
+                        <h2>Flap pocket overcoat</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Tops">
+                      <img src = "img/img_18.jpg" alt = "Item image">
+                        <h2>Zip up hoodie</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Bottoms">
+                      <img src = "img/img_19.jpg" alt = "Item image">
+                        <h2>Slant pocket sweatplants</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+                    <div class = "filter-item All Dresses">
+                      <img src = "img/img_22.jpg" alt = "Item image">
+                        <h2>Neck slit thigh dress</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Tops">
+                      <img src = "img/img_24.jpg" alt = "Item image">
+                        <h2>Drop shoulder plaid blouse</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                               <p><i class="fa fa-exchange"></i></p>
+                            </div> 
+
+                    <div class = "filter-item All Tops">
+                      <img src = "img/img_25.jpg" alt = "Item image">
+                        <h2>Drop shoulder tee</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>  
+
+                    <div class = "filter-item All Dresses">
+                      <img src = "img/img_26.jpg" alt = "Item image">
+                        <h2>Chiffon formal maxi dress</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div> 
+
+                    <div class = "filter-item All Tops">
+                      <img src = "img/img_27.jpg" alt = "Item image">
+                        <h2>Flounce sleeve blouse</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>   
+
+                    <div class = "filter-item All Dresses">
+                      <img src = "img/img_28.jpg" alt = "Item image">
+                        <h2>Sleeve belted shirt dress</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>  
+
+                    <div class = "filter-item All Tops">
+                      <img src = "img/img_29.jpg" alt = "Item image">
+                        <h2>Coller rib knit top</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                               <p><i class="fa fa-exchange"></i></p>
+                            </div>  
+
+                    <div class = "filter-item All Tops">
+                      <img src = "img/img_30.jpg" alt = "Item image">
+                        <h2>Letter graphic tee</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>  
+
+                     <div class = "filter-item All Dresses">
+                      <img src = "img/img_31.jpg" alt = "Item image">
+                        <h2>Sleeve A-line dress</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>   
+
+                     <div class = "filter-item All Dresses">
+                      <img src = "img/img_32.jpg" alt = "Item image">
+                        <h2>Letter graphic nightdress</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>   
+
+                     <div class = "filter-item All Dresses">
+                      <img src = "img/img_33.jpg" alt = "Item image">
+                        <h2>lace up front dress</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>   
+
+                     <div class = "filter-item All Dresses">
+                      <img src = "img/img_34.jpg" alt = "Item image">
+                        <h2>Scroll print A-line dress</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>                        
+            
+        </div>
+    </div>
+ <!-----------------End of item list------------------------------------------> 
+
+
+<!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Swapify</h3>
+            <p>
+              A108 Adam Street <br>
+              Makkah, Makkah Province<br>
+              Saudi Arabia <br><br>
+              <strong>Phone:</strong> +966 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="FAQs.html">FAQs</a></li>
+            </ul>
+          </div>
+
+      
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-lg-flex py-4">
+
+      <div class="me-lg-auto text-center text-lg-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Swapify</span></strong>. All Rights Reserved
+        </div>
+        
+      </div>
+      <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+<!----------------scrips------------>
+<script>
+  const allFilterItems = document.querySelectorAll('.filter-item');
+const allFilterBtns = document.querySelectorAll('.filter-btn');
+
+window.addEventListener('DOMContentLoaded', () => {
+    allFilterBtns[0].classList.add('active-btn');
+});
+
+allFilterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        showFilteredContent(btn);
+    });
+});
+
+function showFilteredContent(btn){
+    allFilterItems.forEach((item) => {
+        if(item.classList.contains(btn.id)){
+            resetActiveBtn();
+            btn.classList.add('active-btn');
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+
+function resetActiveBtn(){
+    allFilterBtns.forEach((btn) => {
+        btn.classList.remove('active-btn');
+    });
+}
+</script>
+
+
+
+  
+</body>
+
+</html>

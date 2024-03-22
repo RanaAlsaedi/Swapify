@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Categories</title>
+   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- External styles -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/Swapify-removebg-preview.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-----------Style the item list --------------->
+  <style>
+    .rating .fa{
+    color:#708090;}
+    .wrapper{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.title{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #1b1919;
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.filter-btns{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+.filter-btn{
+    background: none;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 10px 30px;
+    font-size: 16px;
+    color: #708090;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.filter-btn::after{
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color: #555;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out
+}
+.filter-btn:hover{
+    color: #555;
+}
+.filter-btn:hover::after{
+    width: 100%;
+}
+/* active button */
+.active-btn{
+    color: #555;
+}
+.active-btn::after{
+    width: 100%;
+}
+/*  */
+
+.filter-items{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.filter-item:hover .item-img img{
+transform: translateY(-5px);
+}
+.filter-item{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition:transform 0.5s;
+}
+.filter-item img{
+    width: 100%;
+}
+h2{
+    font-size:15px;
+    color:#000000;
+    font-weight: normal;
+}
+
+.filter-item p{
+    font-size: 14px;
+    color: #800000;
+}
+.filter-item:hover{
+    transform: translateY(-5px);
+
+}
+
+@-webkit-keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+  </style>
+
+<!------------------ End of style ------------------>
+</head>
+<body>
+
+
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/Swapify-removebg-preview.png" alt="Image could not load" class="img-fluid"></a>
+            </div>
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="logo">
+                    <h1 style="display: inline;"><a href="index.html" style="display: inline;">Swapify</a></h1>
+                </div>
+            </div>
+        </div>
+        
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+
+          <li><a href="CartPage.html">Cart</a></li>
+          <li class="dropdown"><a href="#"><span>Account</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="SignUp.html">Sign up</a></li>
+              <li><a href="logIn_.html">Log in</a></li>
+              <li class="dropdown"><a href="Profile_s.html"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="OrderHis.html">Order History</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->   
+</header>
+
+
+
+<!-------------------item list--------------------------->
+    <div class = "wrapper">
+        
+                <div class = "filter-btns">
+                    <button type = "button" class = "filter-btn" id = "All">All</button>
+                    <button type = "button" class = "filter-btn" id = "Ring">Ring</button>
+                    <button type = "button" class = "filter-btn" id = "Necklace">Necklace</button>
+                    <button type = "button" class = "filter-btn" id = "Watch">Watch</button>
+                </div>
+
+                <div class = "filter-items">
+                    <div class = "filter-item All Necklace">
+                     <a href="details3.html"> <img src = "img/necklace6.jpg" alt = "Item image"></a>
+                        <h2>Rhinestone Butterfly</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Necklace">
+                      <img src = "img/necklace2.jpg" alt = "Item image">
+                        <h2> simple chain necklace</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Necklace">
+                      <img src = "img/necklace3.jpg" alt = "Item image">
+                        <h2> Layered rhinestone necklace</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Necklace">
+                      <img src = "img/necklace4.jpg" alt = "Item image">
+                        <h2> Rhinestone pendant necklace</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Necklace">
+                      <img src = "img/necklace5.jpg" alt = "Item image">
+                        <h2>simple chain necklace</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Necklace">
+                      <img src = "img/necklace1.jpg" alt = "Item image">
+                        <h2>Layered necklace with pendats</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Necklace">
+                      <img src = "img/necklace7.jpg" alt = "Item image">
+                        <h2>metal pendant</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Necklace">
+                      <img src = "img/necklace8.jpg" alt = "Item image">
+                        <h2>necklace with rhinestone drop</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Necklace">
+                      <img src = "img/necklace9.jpg" alt = "Item image">
+                        <h2>Fashion stainless stell</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Necklace">
+                      <img src = "img/necklace10.jpg" alt = "Item image">
+                        <h2>Stainless steel pendant</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+                        
+                    <div class = "filter-item All Ring">
+                      <img src = "img/ring1.jpg" alt = "Item image">
+                        <h2>Hollow cut ring</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Ring">
+                      <img src = "img/ring2.jpg" alt = "Item image">
+                        <h2>Ring decoration ball</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Ring">
+                      <img src = "img/ring3.jpg" alt = "Item image">
+                        <h2>Open design ring</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Ring">
+                      <img src = "img/ring4.jpg" alt = "Item image">
+                        <h2>Rhinestone ring ornament</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                               <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Ring">
+                      <img src = "img/ring5.jpg" alt = "Item image">
+                        <h2>Open ring cubic ornament</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Ring">
+                      <img src = "img/ring6.jpg" alt = "Item image">
+                        <h2>Rhinestone beaded ring 4 pieces</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Ring">
+                      <img src = "img/ring7.jpg" alt = "Item image">
+                        <h2>bead ring</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Ring">
+                      <img src = "img/ring8.jpg" alt = "Item image">
+                        <h2>2 pieces cubic zirconia</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+                    <div class = "filter-item All Ring">
+                      <img src = "img/ring9.jpg" alt = "Item image">
+                        <h2>Ring decorated with rhinestone</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>
+
+                    <div class = "filter-item All Ring">
+                      <img src = "img/ring10.jpg" alt = "Item image">
+                        <h2>cubic zirconia ring</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <<p><i class="fa fa-exchange"></i></p>
+                            </div> 
+
+                    <div class = "filter-item All Watch">
+                      <img src = "img/watch1.jpg" alt = "Item image">
+                        <h2>Black quartz watch</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                               <p><i class="fa fa-exchange"></i></p>
+                            </div>  
+
+                    <div class = "filter-item All Watch">
+                      <img src = "img/watch2.jpg" alt = "Item image">
+                        <h2>Rhinestone watch and bracelet</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div> 
+
+                    <div class = "filter-item All Watch">
+                      <img src = "img/watch3.jpg" alt = "Item image">
+                        <h2>One piece quartz watch and bracelet</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>   
+
+                    <div class = "filter-item All Watch">
+                      <img src = "img/watch4.jpg" alt = "Item image">
+                        <h2>leather watch</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>  
+
+                    <div class = "filter-item All Watch">
+                      <img src = "img/watch5.jpg" alt = "Item image">
+                        <h2>leather blue watch</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>  
+
+                    <div class = "filter-item All Watch">
+                      <img src = "img/watch6.jpg" alt = "Item image">
+                        <h2>Zinc alloy silver watch</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>  
+
+                     <div class = "filter-item All Watch">
+                      <img src = "img/watch7.jpg" alt = "Item image">
+                        <h2>Quartz watch with its bracelets</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>   
+
+                     <div class = "filter-item All Watch">
+                      <img src = "img/watch8.jpg" alt = "Item image">
+                        <h2>Leather watch with its bracelets</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>   
+
+                     <div class = "filter-item All Watch">
+                      <img src = "img/watch9.jpg" alt = "Item image">
+                        <h2>leather brown watch</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                  <i class="fa fa-star-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>   
+
+                     <div class = "filter-item All Watch">
+                      <img src = "img/watch10.jpg" alt = "Item image">
+                        <h2>Quartz watch</h2>
+                                <div class="rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <p><i class="fa fa-exchange"></i></p>
+                            </div>                                                                                                                                                                  
+
+
+                
+            
+        </div>
+    </div>
+ <!-----------------End of item list------------------------------------------> 
+
+
+<!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Swapify</h3>
+            <p>
+              A108 Adam Street <br>
+              Makkah, Makkah Province<br>
+              Saudi Arabia <br><br>
+              <strong>Phone:</strong> +966 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="FAQs.html">FAQs</a></li>
+            </ul>
+          </div>
+
+      
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-lg-flex py-4">
+
+      <div class="me-lg-auto text-center text-lg-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Swapify</span></strong>. All Rights Reserved
+        </div>
+        
+      </div>
+      <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+<!----------------scrips------------>
+<script>
+  const allFilterItems = document.querySelectorAll('.filter-item');
+const allFilterBtns = document.querySelectorAll('.filter-btn');
+
+window.addEventListener('DOMContentLoaded', () => {
+    allFilterBtns[0].classList.add('active-btn');
+});
+
+allFilterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        showFilteredContent(btn);
+    });
+});
+
+function showFilteredContent(btn){
+    allFilterItems.forEach((item) => {
+        if(item.classList.contains(btn.id)){
+            resetActiveBtn();
+            btn.classList.add('active-btn');
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+
+function resetActiveBtn(){
+    allFilterBtns.forEach((btn) => {
+        btn.classList.remove('active-btn');
+    });
+}
+</script>
+
+
+
+  
+</body>
+
+</html>
